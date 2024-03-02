@@ -1,9 +1,10 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "allocator.h"
-#include "my_malloc.h"
-#include "free.h"
+#include "../include/allocator.h"
+#include "../include/my_malloc.h"
+#include "../include/free.h"
+
 
 Block *create_initial_pool(size_t size);
 void test_initial_pool_not_null(Block *first_pool);
@@ -16,7 +17,7 @@ void test_small_my_malloc();
 void test_my_free();
 void test_merge_blocks_null();
 void test_merge_blocks();
-
+ 
 #define ASSERT(condition, message) \
 	do { \
 		if (!(condition)) { \

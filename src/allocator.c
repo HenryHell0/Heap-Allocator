@@ -1,4 +1,7 @@
-#include "allocator.h"
+#include "../include/allocator.h"
+
+
+#define MAP_ANONYMOUS 0x20 // I have to define this manually, in /usr/include/x86_64-linux-gnu/bits/mman-linux.h it is under an if statment and doesent exist.
 
 Block *get_initial_pool(size_t size) {
 	static Block *initial_pool = NULL;
